@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""A module for Fabric script that generates a .tgz archive."""
+"""Fabric script that generates a .tgz archive."""
 import os
 from datetime import datetime
 from fabric.api import local, runs_once
@@ -7,7 +7,9 @@ from fabric.api import local, runs_once
 
 @runs_once
 def do_pack():
-    """Archives the static files."""
+    """Archives all 
+    the static files.
+    """
     if not os.path.isdir("versions"):
         os.mkdir("versions")
     d_time = datetime.now()
